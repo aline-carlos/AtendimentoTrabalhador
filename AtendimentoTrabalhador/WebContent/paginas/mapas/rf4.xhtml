@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF4.jpg"  alt="Região Funcional 4" id="mapaRF4" usemap="#mapaRF4" style="border:none;"/>
+ 			
+			<map name="mapaRF4">
+			    <area shape="circle" coords="375,52,10" href="../agencia.xhtml?agencia=127" target="" alt="Torres" />
+			    <area shape="circle" coords="329,116,10" href="../agencia.xhtml?agencia=21" target="" alt="Capão da Canoa"  />
+			    <area shape="circle" coords="325,135,8,5" href="../agencia.xhtml?agencia=154" target="" alt="Xangri-Lá" />
+			    <area shape="circle" coords="271,133,10" href="../agencia.xhtml?agencia=101" target="" alt="Santo Antonio da Patrulha" />
+			    <area shape="circle" coords="300,143,10" href="../agencia.xhtml?agencia=69" target="" alt="Osório"  />
+			    <area shape="circle" coords="317,161,10" href="../agencia.xhtml?agencia=143" target="" alt="Imbé" />
+			    <area shape="circle" coords="306,180,10" href="../agencia.xhtml?agencia=128" target="" alt="Tramandaí"  />
+			    <area shape="circle" coords="243,204,10" href="../agencia.xhtml?agencia=140" target="" alt="Capivari do Sul" />
+			    <area shape="circle" coords="297,211,10" href="../agencia.xhtml?agencia=28" target="" alt="Cidreira"/>
+			    <area shape="circle" coords="288,238,10" href="../agencia.xhtml?agencia=139" target="" alt="Balneário Pinhal" />
+			    <area shape="circle" coords="245,230,10" href="../agencia.xhtml?agencia=70" target="" alt="Palmares do Sul" />
+			
+			</map> 		
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Torres" outcome="/paginas/agencia">
+					<f:param name="agencia" value="127" />
+				</h:link>
+				<h:link value="2. Capão da Canoas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="21" />
+				</h:link>
+				<h:link value="3. Xangri-Lá" outcome="/paginas/agencia">
+					<f:param name="agencia" value="154" />
+				</h:link>
+				<h:link value="4. Santo Antonio da Patrulha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="101" />
+				</h:link>
+				<h:link value="5. Osório" outcome="/paginas/agencia">
+					<f:param name="agencia" value="69" />
+				</h:link>
+				<h:link value="6. Imbé" outcome="/paginas/agencia">
+					<f:param name="agencia" value="143" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid>
+				<h:link value="7. Tramandaí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="128" />
+				</h:link>
+				<h:link value="8. Capivair do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="140" />
+				</h:link>
+				<h:link value="9. Cidreira" outcome="/paginas/agencia">
+					<f:param name="agencia" value="28" />
+				</h:link>
+				<h:link value="10. Balneário Pinhal" outcome="/paginas/agencia">
+					<f:param name="agencia" value="139" />
+				</h:link>
+				<h:link value="11. Palmares do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="70" />
+				</h:link>
+			</h:panelGrid>
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf4}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+

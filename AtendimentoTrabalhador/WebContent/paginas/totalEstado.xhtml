@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+
+		<h:form id="frmAvaliacao">
+
+	 		<p:panel id="exibição" >
+			
+				<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.lista}" emptyMessage="Nenhum registro encontrado.">
+					<p:column headerText="Período">
+						<h:outputText value="#{registro.id.periodo}" />
+					</p:column>
+					<p:column headerText="Vagas">
+						<h:outputText value="#{registro.vagas}" />
+					</p:column>
+					<p:column headerText="Inscritos">
+						<h:outputText value="#{registro.inscritos}" />
+					</p:column>
+	
+					<p:column headerText="Encaminhados">
+						<h:outputText value="#{registro.encaminhados}" />
+					</p:column>
+					<p:column headerText="Colocados">
+						<h:outputText value="#{registro.colocados}" />
+					</p:column>
+				</p:dataTable>
+			</p:panel>
+			Gráfico
+			fim do grafico
+		</h:form>
+
+
+	</ui:define>
+	 
+</ui:composition>
+
+
+
+<!-- 
+
+<html 
+	xmlns="http://www.w3.org/1999/xhtml"  
+    xmlns:h="http://java.sun.com/jsf/html"  
+    xmlns:f="http://java.sun.com/jsf/core"  
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Atendimento ao Trabalhador</title>
+
+<style type="text/css">
+	body{
+		font-size: 10px;
+	}
+</style>
+</h:head>
+<body>
+	<div id="header" class="ui-widget ui-widget-header">
+		<div  style="float left;">
+			<img src="imagens/logoFGTAS.png" alt="Logo"   /> 
+			<span style="font-size:30px;"> Relatório de Atendimento ao Trabalhador </span>
+		</div>
+	
+	
+			
+	</div> 
+
+     <h:form id="Links">
+        <p:panel  closable="false" footer="Sistema de Avaliação" header="Menu Principal" style="width:350px">
+           <div id="menu">
+           	<h:commandLink value ="Dados de intermediação" action ="#{intermediacaoMB.listarEstado}"/>
+            </div>   
+        </p:panel>
+        </h:form>
+        
+	<h:form id="frmAvaliacao">
+
+	 	<p:panel id="exibição" >
+			
+			<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.lista}">
+			<p:column headerText="Período">
+					<h:outputText value="#{registro.id.periodo}" />
+				</p:column>
+				<p:column headerText="Vagas">
+					<h:outputText value="#{registro.vagas}" />
+				</p:column>
+				<p:column headerText="Inscritos">
+					<h:outputText value="#{registro.inscritos}" />
+				</p:column>
+
+				<p:column headerText="Encaminhados">
+					<h:outputText value="#{registro.encaminhados}" />
+				</p:column>
+				<p:column headerText="Colocados">
+					<h:outputText value="#{registro.colocados}" />
+				</p:column>
+			</p:dataTable>
+		</p:panel>
+		Gráfico
+		<p:lineChart id="category" value="#{intermediacaoMB.graficoIntermediacao}" legendPosition="e"  
+     			title="Intermediação RS" minY="0" maxY="1100" style="height:300px;margin-top:20px"/> 
+		fim do grafico
+	</h:form>
+        
+        
+</body>
+</html> -->

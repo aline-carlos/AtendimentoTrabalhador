@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Atendimento ao Trabalhador</title>
+	<!--  <link href="../../resources/css/principal.css" rel="stylesheet" type="text/css" /> -->
+	<script type="text/javascript">
+     
+      function setaAgencia(agencia) {
+          document.getElementById("#{p:component('inputHiddenAgencia')}").value = agencia;
+          document.getElementById("#{p:component('inputHiddenAgenciaIntermediacao')}").value = agencia;
+          remoteAgencia();
+        }
+	</script>
+</h:head>
+<h:body>
+
+	<style type="text/css">
+.ui-widget {
+	font-size: 12px !important;
+}
+</style>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="120" resizable="false"
+			closable="false" collapsible="true">
+			 <h:graphicImage url="/logoFGTAS.png" /> 
+			 <span style="font-size:30px;"> Relatório de Atendimento ao Trabalhador </span>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200px" resizable="true"
+			closable="false" collapsible="true" effect="drop">
+			<ui:include src="/template/menu.xhtml" />
+		</p:layoutUnit>
+
+		<p:layoutUnit position="center">
+			<ui:insert name="conteudo" />
+		</p:layoutUnit>
+		<h:form>
+		 				<h:inputHidden id="inputHiddenAgencia" value="#{agenciaMB.agencia.codigo}"/>       
+ 				<h:inputHidden id="inputHiddenAgenciaIntermediacao" value="#{intermediacaoMB.nroAgencia}"/>       
+	 	  		<p:remoteCommand  name="remoteAgencia" action="#{agenciaMB.paginaAgencia}" >      
+				</p:remoteCommand>
+		
+		</h:form>
+
+	</p:layout>
+
+
+</h:body>
+</html>

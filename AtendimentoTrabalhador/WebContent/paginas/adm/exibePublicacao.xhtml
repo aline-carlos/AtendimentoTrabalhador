@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="logout">
+		<h:form id="frmlogout" > 
+			<h:link value ="logout"  outcome="index"/>
+		</h:form>
+	</ui:define>
+ 	
+	<ui:define name="conteudo">
+		<h:form id="frmPublicacao" > 
+			<h:panelGrid columns="4" > 
+				<p:growl id="growl" showDetail="true"/>  
+				<h:commandLink value ="logout" action ="#{usuarioMB.logout}"/>
+   
+				<h:outputLabel value="#{publicacaoMB.mensagem}" />
+			</h:panelGrid>
+			<p:panel header="Publicação de indicadores de desempenho" style="width:470px;margin:2% 25% 1% 25%;" >
+				<h:panelGrid columns="4" > 
+				
+				 	<h:outputLabel for="periodo" value="Período" />
+					<p:inputMask id="periodo" value="#{publicacaoMB.publicacao.periodo}" mask="9999/99"  converter="mascaraConverter"  validator="validaPeriodo"/>  
+					<p:commandButton  value="Consultar" type="submit" action="#{publicacaoMB.consultar}" update="grupos,frmPublicacao" />
+					<p:message for="periodo" />
+					
+				</h:panelGrid> 
+			</p:panel>
+			<p:panel header="Grupos" style="width:470px;margin:2% 25% 1% 25%;" >
+			<h:panelGrid columns="4" id="grupos">
+					
+					<h:outputLabel for="intermediacao" value="Intermediação" />
+        			<p:selectBooleanCheckbox id="intermediacao" value="#{publicacaoMB.publicacao.intermediacao}"  />  
+					
+					<h:outputLabel for="caged" value="CAGED" />
+        			<p:selectBooleanCheckbox id="caged" value="#{publicacaoMB.publicacao.caged}" />
+        			
+        			<h:outputLabel for="segurodesemprego" value="Seguro Desemprego" />
+        			<p:selectBooleanCheckbox id="segurodesemprego" value="#{publicacaoMB.publicacao.segurodesemprego}" />  
+        			
+        			<h:outputLabel for="ctps" value="Carteira de Trabalho" />
+        			<p:selectBooleanCheckbox id="ctps" value="#{publicacaoMB.publicacao.ctps}" />  
+        			
+			</h:panelGrid>
+			</p:panel>
+			<h:panelGrid columns="3" id="operacoes" style="margin:2% 25% 1% 25%;">
+				<p:commandButton value="Salvar" type="submit" action="#{publicacaoMB.salvar}" 	update="grupos,frmPublicacao" />
+				<p:commandButton  type="reset" value="Desfazer alterações" update="grupos,frmPublicacao" />
+			</h:panelGrid>
+		</h:form>
+
+  
+	</ui:define>
+</ui:composition>
+	
+
+
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+		
+		<f:metadata>  
+	    	<f:viewParam name="agencia" value="#{agenciaMB.agenciaSelecionada}" />  
+	    	<f:viewParam name="agencia" value="#{intermediacaoMB.nroAgencia}" />
+		</f:metadata>  
+		
+		<h:form id="frmAgencia">
+	
+	 		<p:panel id="exibição"   >
+				<h:panelGrid columns="1" > 
+					<h:outputText value="#{agenciaMB.agencia.nome}" />
+				</h:panelGrid>
+				<h:panelGrid columns="2" > 
+					<h:outputLabel for="municipio" value="Município:" />
+					<h:outputText id="municipio" value="#{agenciaMB.agencia.municipio.nome}" />
+					<h:outputLabel for="regiao" value="Região Funcional:" />
+					<h:outputText id="regiao" value="#{agenciaMB.agencia.municipio.regional.descricao}" />
+					<h:outputLabel for="endereco" value="Endereço:" />
+					<h:outputText id="endereco" value="#{agenciaMB.agencia.endereco}" />
+					<h:outputLabel for="telefone" value="Telefone:" />
+					<h:outputText id="telefone" value="#{agenciaMB.agencia.telefone}" />
+					<h:outputLabel for="email" value="E-mail:" />
+					<h:outputText id="email" value="#{agenciaMB.agencia.email}" />
+					<h:outputLabel for="infadicionais" value="Informações Adicionais:" />
+					<p:inputTextarea id="infadicionais"  rows="5" cols="80" readonly="true"  value="#{agenciaMB.agencia.infadicionais}"/> 
+     			</h:panelGrid>
+			</p:panel>
+		</h:form>
+		<h:panelGrid columns="5" > 
+			<h:link value="Página Inicial" outcome="/index" />&nbsp;<h:link value="#{intermediacaoMB.local}"  outcome="#{intermediacaoMB.voltar}"/>&nbsp; Agência
+		</h:panelGrid>
+
+
+	</ui:define>
+	 
+</ui:composition>
+

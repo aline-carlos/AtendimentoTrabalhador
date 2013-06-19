@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+body {
+
+ /*text-align: center;*/  
+}
+ 
+ 
+#titulo{
+	
+	font-size:30px;
+	padding:5%;
+
+}
+
+
+#mapaRS{
+	margin: 0 auto;
+	border-style:none;
+	/*text-align: center;*/
+
+}

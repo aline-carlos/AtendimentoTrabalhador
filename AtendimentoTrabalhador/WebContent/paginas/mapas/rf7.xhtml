@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF7.jpg"  alt="Região Funcional 7" id="mapaRF7" usemap="#mapaRF7" style="border:none;"/>
+ 			
+			<map name="mapaRF7">
+			    <area shape="circle" coords="371,84,10" href="../agencia.xhtml?agencia=125" target="" alt="Tenente Portela" />
+			    <area shape="circle" coords="371,167,10" href="../agencia.xhtml?agencia=102" target="" alt="Santo Augusto" />
+			    <area shape="circle" coords="343,100,10" href="../agencia.xhtml?agencia=131" target="" alt="Três Passos" />
+			    <area shape="circle" coords="306,92,10" href="../agencia.xhtml?agencia=30" target="" alt="Crissiumal"  />
+			    <area shape="circle" coords="277,119,10" href="../agencia.xhtml?agencia=52" target="" alt="Horizontina"  />
+			    <area shape="circle" coords="295,148,10" href="../agencia.xhtml?agencia=130" target="" alt="Três de Maio" />
+			    <area shape="circle" coords="249,172,10" href="../agencia.xhtml?agencia=96" target="" alt="Santa Rosa" />
+			    <area shape="circle" coords="167,283,10" href="../agencia.xhtml?agencia=111" target="" alt="São Luiz Gonzaga" />
+			    <area shape="circle" coords="229,232,10" href="../agencia.xhtml?agencia=51" target="" alt="Guarani das Missões" />
+			    <area shape="circle" coords="271,199,10" href="../agencia.xhtml?agencia=45" target="" alt="Giruá"  />
+			    <area shape="circle" coords="286,246,10" href="../agencia.xhtml?agencia=100" target="" alt="Santo Ângelo" />
+			    <area shape="circle" coords="348,274,10" href="../agencia.xhtml?agencia=56" target="" alt="Ijuí"  />
+			    <area shape="circle" coords="421,255,10" href="../agencia.xhtml?agencia=72" target="" alt="Panambi" />
+			</map> 		
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Tenente Portela" outcome="/paginas/agencia">
+					<f:param name="agencia" value="125" />
+				</h:link>
+				<h:link value="2. Santo Augusto" outcome="/paginas/agencia">
+					<f:param name="agencia" value="102" />
+				</h:link>
+				<h:link value="3. Três Passos" outcome="/paginas/agencia">
+					<f:param name="agencia" value="131" />
+				</h:link>
+				<h:link value="4. Crissiumal" outcome="/paginas/agencia">
+					<f:param name="agencia" value="30" />
+				</h:link>
+				<h:link value="5. Horizontina" outcome="/paginas/agencia">
+					<f:param name="agencia" value="52" />
+				</h:link>
+				<h:link value="6. Três de Maio" outcome="/paginas/agencia">
+					<f:param name="agencia" value="130" />
+				</h:link>
+				<h:link value="7. Santa Rosa" outcome="/paginas/agencia">
+					<f:param name="agencia" value="96" />
+				</h:link>
+				
+			</h:panelGrid>
+			<h:panelGrid columns="1" > 
+				<h:link value="8. São Luiz Gonzaga" outcome="/paginas/agencia">
+					<f:param name="agencia" value="111" />
+				</h:link>
+				<h:link value="9. Guarani das Missões" outcome="/paginas/agencia">
+					<f:param name="agencia" value="51" />
+				</h:link>
+				<h:link value="10. Giruá" outcome="/paginas/agencia">
+					<f:param name="agencia" value="45" />
+				</h:link>
+				<h:link value="11. Santo Ângelo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="100" />
+				</h:link>
+				<h:link value="12. Ijuí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="56" />
+				</h:link>
+				<h:link value="13. Panambi" outcome="/paginas/agencia">
+					<f:param name="agencia" value="72" />
+				</h:link>
+			</h:panelGrid>
+				
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf7}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+

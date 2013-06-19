@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+
+		<h:form id="frmRanking" style="text-align:center">
+			<h:outputText value="#{intermediacaoMB.ranking}"/> 
+
+			<h:outputText value="#{intermediacaoMB.titulo}" />
+			<h:panelGrid style="margin:auto" >	
+				<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.rankinglist}"  style="margin:2% 0% 0% 0%"  emptyMessage="Não há dados para o mês anterior">
+					<p:column headerText="Municipio" style="text-align:left">
+						<h:outputText value="#{registro.municipio.nome}" />
+					</p:column>
+					<p:column headerText="Colocados" style="text-align:right">
+						<h:outputText value="#{registro.colocados}" />
+					</p:column>
+					<p:column headerText="Admitidos CAGED" style="text-align:right">
+						<h:outputText value="#{registro.admitidoscaged}" />
+					</p:column>
+					<p:column headerText="Meta (abs)" style="text-align:right">
+						<h:outputText value="#{registro.metaAbsoluta}" />
+					</p:column>
+					<p:column headerText="Meta (%)" style="text-align:right">
+						<h:outputText value="#{registro.meta}" />
+					</p:column>
+					<p:column headerText="Índice" style="text-align:right">
+						<h:outputText value="#{registro.indice}" />
+					</p:column>
+					<p:column headerText="% Meta Atingida" style="text-align:right">
+						<h:outputText value="#{registro.percMetaAtingida}" />
+					</p:column>
+					<p:column headerText="Saldo" style="text-align:right">
+						<h:outputText value="#{registro.saldo}" />
+					</p:column>
+					<p:column headerText="Posição" style="text-align:center">
+						<h:outputText value="#{registro.posicao}" />
+					</p:column>
+				</p:dataTable>
+			</h:panelGrid>
+		</h:form>
+		<h:panelGrid columns="7" > 
+			<h:link value="Página Inicial" outcome="/index" /> &nbsp;<h:link value="#{intermediacaoMB.local}"  outcome="#{intermediacaoMB.voltar}"/> &nbsp;<h:link value="#{intermediacaoMB.localAgencia}"  outcome="#{intermediacaoMB.voltarAgencia}"/> &nbsp; Ranking
+		</h:panelGrid>
+
+	</ui:define>
+	 
+</ui:composition>
+

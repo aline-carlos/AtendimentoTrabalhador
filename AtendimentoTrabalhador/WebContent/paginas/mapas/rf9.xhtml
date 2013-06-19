@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF9.jpg"  alt="Região Funcional 9" id="mapaRF9" usemap="#mapaRF9"  style="border:none;"/>
+ 			
+ 			<map name="mapaRF9">
+			    <area shape="circle" coords="98,42,10,5" href="../agencia.xhtml?agencia=57" target="" alt="Iraí"  />
+			    <area shape="circle" coords="71,65,10,5" href="../agencia.xhtml?agencia=42" target="" alt="Frederico Westphalen" />
+			    <area shape="circle" coords="76,94,10,5" href="../agencia.xhtml?agencia=117" target="" alt="Seberi" />
+			    <area shape="circle" coords="147,138,10,5" href="../agencia.xhtml?agencia=29" target="" alt="Constantina"  />
+			    <area shape="circle" coords="169,145,10,5" href="../agencia.xhtml?agencia=89" target="" alt="Ronda Alta" />
+			    <area shape="circle" coords="85,164,10,5" href="../agencia.xhtml?agencia=71" target="" alt="Palmeira das Missões"/>
+			    <area shape="circle" coords="129,171,10,5" href="../agencia.xhtml?agencia=116" target="" alt="Sarandi"  />
+			    <area shape="circle" coords="171,236,10,5" href="../agencia.xhtml?agencia=24" target="" alt="Carazinho"  />
+			    <area shape="circle" coords="232,233,10,5" href="../agencia.xhtml?agencia=75" target="" alt="Passo Fundo"  />
+			    <area shape="circle" coords="219,333,10,5" href="../agencia.xhtml?agencia=120" target="" alt="Soledade" />
+			    <area shape="circle" coords="264,268,10,5" href="../agencia.xhtml?agencia=62" target="" alt="Marau" />
+			    <area shape="circle" coords="301,291,10,5" href="../agencia.xhtml?agencia=141" target="" alt="Casca" />
+			    <area shape="circle" coords="351,219,10,5" href="../agencia.xhtml?agencia=53" target="" alt="Ibiraiaras" />
+			    <area shape="circle" coords="376,224,10,5" href="../agencia.xhtml?agencia=60" target="" alt="Lagoa Vermelha"  />
+			    <area shape="circle" coords="300,196,10,5" href="../agencia.xhtml?agencia=121" target="" alt="Tapejara" />
+			    <area shape="circle" coords="329,176,10,5" href="../agencia.xhtml?agencia=93" target="" alt="Sananduva"  />
+			    <area shape="circle" coords="260,155,10,5" href="../agencia.xhtml?agencia=44" target="" alt="Getúlio Vargas" />
+			    <area shape="circle" coords="269,112,10,5" href="../agencia.xhtml?agencia=35" target="" alt="Erechim"  />
+			    <area shape="circle" coords="185,58,10,5" href="../agencia.xhtml?agencia=64" target="" alt="Nonoai" />
+			</map>
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Iraí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="57" />
+				</h:link>
+				<h:link value="2. Frederico Westphalen" outcome="/paginas/agencia">
+					<f:param name="agencia" value="42" />
+				</h:link>
+				<h:link value="3. Seberi" outcome="/paginas/agencia">
+					<f:param name="agencia" value="117" />
+				</h:link>
+				<h:link value="4. Constantina" outcome="/paginas/agencia">
+					<f:param name="agencia" value="29" />
+				</h:link>
+				<h:link value="5. Ronda Alta" outcome="/paginas/agencia">
+					<f:param name="agencia" value="89" />
+				</h:link>
+				<h:link value="6. Palmeira das Missões" outcome="/paginas/agencia">
+					<f:param name="agencia" value="71" />
+				</h:link>
+				<h:link value="7. Sarandi" outcome="/paginas/agencia">
+					<f:param name="agencia" value="116" />
+				</h:link>
+				<h:link value="8. Carazinho" outcome="/paginas/agencia">
+					<f:param name="agencia" value="24" />
+				</h:link>
+				<h:link value="9. Passo Fundo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="75" />
+				</h:link>
+				<h:link value="10. Soledade" outcome="/paginas/agencia">
+					<f:param name="agencia" value="120" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid>
+				<h:link value="11. Marau" outcome="/paginas/agencia">
+					<f:param name="agencia" value="62" />
+				</h:link>
+				<h:link value="12. Casca" outcome="/paginas/agencia">
+					<f:param name="agencia" value="141" />
+				</h:link>
+				<h:link value="13. Ibiraiaras" outcome="/paginas/agencia">
+					<f:param name="agencia" value="53" />
+				</h:link>
+				<h:link value="14. Lagoa Vermelha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="60" />
+				</h:link>
+				<h:link value="15. Tapejara" outcome="/paginas/agencia">
+					<f:param name="agencia" value="121" />
+				</h:link>
+				<h:link value="16. Sananduva" outcome="/paginas/agencia">
+					<f:param name="agencia" value="93" />
+				</h:link>
+				<h:link value="17. Getúlio Vargas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="44" />
+				</h:link>
+				<h:link value="18. Erechim" outcome="/paginas/agencia">
+					<f:param name="agencia" value="35" />
+				</h:link>
+				<h:link value="19. Nonoai" outcome="/paginas/agencia">
+					<f:param name="agencia" value="64" />
+				</h:link>
+			
+			</h:panelGrid>
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf9}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+

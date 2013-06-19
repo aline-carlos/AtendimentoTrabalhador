@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:outputText value="#{intermediacaoMB.rf1}"/>
+		<h:panelGrid columns="3">  
+	 		<img src="../../imagens/RF1_Teste.jpg"  alt="Região Funcional 1" id="mapaRF1" usemap="#mapaRF1" style="border:none;" />
+	    
+	       
+			<map name="mapaRF1">
+				<area shape="circle" coords="253,192,8" href="../agencia.xhtml?agencia=81" target="" alt="Porto Alegre" /> 
+			    <area shape="circle" coords="300,176,8" href="../agencia.xhtml?agencia=2" target="" alt="Alvorada" />
+			    <area shape="circle" coords="290,209,8" href="../agencia.xhtml?agencia=138" target="" alt="Viamão" />
+			    <area shape="circle" coords="355,139,8" href="../agencia.xhtml?agencia=46" target="" alt="Glorinha"/>
+			    <area shape="circle" coords="299,148,8" href="../agencia.xhtml?agencia=48" target="" alt="Gravataí" />
+			    <area shape="circle" coords="278,147,8" href="../agencia.xhtml?agencia=12" target="" alt="Cachoeirinha"/>
+			    <area shape="circle" coords="256,156,8" href="../agencia.xhtml?agencia=20" target="" alt="Canoas" />
+			    <area shape="circle" coords="236,141,8" href="../agencia.xhtml?agencia=67" target="" alt="Nova Santa Rita"/>
+			    <area shape="circle" coords="256,140,8" href="../agencia.xhtml?agencia=37" target="" alt="Esteio"/>
+			    <area shape="circle" coords="257,121,8" href="../agencia.xhtml?agencia=115" target="" alt="Sapucaia do Sul"/>
+			    <area shape="circle" coords="255,105,8" href="../agencia.xhtml?agencia=109" target="" alt="São Leopoldo" />
+			    <area shape="circle" coords="235,101,8" href="../agencia.xhtml?agencia=80" target="" alt="Portão" />
+			    <area shape="circle" coords="242,82,8" href="../agencia.xhtml?agencia=36" target="" alt="Estância Velha" />
+			    <area shape="circle" coords="260,85,8" href="../agencia.xhtml?agencia=68" target="" alt="Novo Hamburgo" />
+			    <area shape="circle" coords="279,92,8" href="../agencia.xhtml?agencia=15" target="" alt="Campo Bom" />
+			    <area shape="circle" coords="288,75,8" href="../agencia.xhtml?agencia=114" target="" alt="Sapiranga"/>
+			    <area shape="circle" coords="303,66,7,5" href="../agencia.xhtml?agencia=65" target="" alt="Nova Hartz"/>
+			    <area shape="circle" coords="305,86,7,5" href="../agencia.xhtml?agencia=74" target="" alt="Parobé" />
+			    <area shape="circle" coords="327,91,7,5" href="../agencia.xhtml?agencia=123" target="" alt="Taquara"/>
+			    <area shape="circle" coords="320,73,7,5" href="../agencia.xhtml?agencia=55" target="" alt="Igrejinha"/>
+			    <area shape="circle" coords="333,61,7,5" href="../agencia.xhtml?agencia=129" target="" alt="Três Coroas" />
+			    <area shape="circle" coords="374,89,8" href="../agencia.xhtml?agencia=149" target="" alt="Rolante"/>
+			    <area shape="circle" coords="228,43,8" href="../agencia.xhtml?agencia=40" target="" alt="Feliz"/>
+			    <area shape="circle" coords="192,45,8" href="../agencia.xhtml?agencia=92" target="" alt="Salvador do Sul" />
+			    <area shape="circle" coords="212,76,8" href="../agencia.xhtml?agencia=112" target="" alt="São Sebastião do Caí"/>
+			    <area shape="circle" coords="214,100,8" href="../agencia.xhtml?agencia=23" target="" alt="Capela de Santana" />
+			    <area shape="circle" coords="189,94,8" href="../agencia.xhtml?agencia=63" target="" alt="Montenegro"/>
+			    <area shape="circle" coords="152,129,8" href="../agencia.xhtml?agencia=79" target="" alt="Triunfo" />
+			    <area shape="circle" coords="152,146,7,5" href="../agencia.xhtml?agencia=107" target="" alt="São Jerônimo"/>
+			    <area shape="circle" coords="171,148,7,5" href="../agencia.xhtml?agencia=27" target="" alt="Charqueadas" />
+			    <area shape="circle" coords="153,168,8" href="../agencia.xhtml?agencia=4" target="" alt="Arroio dos Ratos"/>
+			    <area shape="circle" coords="123,170,8" href="../agencia.xhtml?agencia=156" target="" alt="Butiá" />
+			    <area shape="circle" coords="90,174,8" href="../agencia.xhtml?agencia=157" target="" alt="Minas do Leão" />
+			    <area shape="circle" coords="210,224,8" href="../agencia.xhtml?agencia=49" target="" alt="Guaíba" />
+			    <area shape="circle" coords="195,306,8" href="../agencia.xhtml?agencia=122" target="" alt="Tapes" />
+			    <area shape="circle" coords="127,343,8" href="../agencia.xhtml?agencia=13" target="" alt="Camaquã" />
+	
+			</map>
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Porto Alegre" outcome="/paginas/agencia">
+					<f:param name="agencia" value="81" />
+				</h:link>
+				<h:link value="2. Alvorada" outcome="/paginas/agencia">
+					<f:param name="agencia" value="2" />
+				</h:link>
+				<h:link value="3. Viamão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="138" />
+				</h:link>
+				<h:link value="4. Glorinha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="46" />
+				</h:link>
+				<h:link value="5. Gravataí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="48" />
+				</h:link>
+				<h:link value="6. Cachoeirinha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="12" />
+				</h:link>
+				<h:link value="7. Canoas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="20" />
+				</h:link>
+				<h:link value="8. Nova Santa Rita" outcome="/paginas/agencia">
+					<f:param name="agencia" value="67" />
+				</h:link>
+				<h:link value="9. Esteio" outcome="/paginas/agencia">
+					<f:param name="agencia" value="37" />
+				</h:link>
+				<h:link value="10. Sapucaia do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="115" />
+				</h:link>
+				<h:link value="11. São Leopoldo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="109" />
+				</h:link>
+				<h:link value="12. Portão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="80" />
+				</h:link>
+				<h:link value="13. Estância Velha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="36" />
+				</h:link>
+				<h:link value="14. Novo Hamburgo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="68" />
+				</h:link>
+				<h:link value="15. Campo Bom" outcome="/paginas/agencia">
+					<f:param name="agencia" value="15" />
+				</h:link>
+				<h:link value="16. Sapiranga" outcome="/paginas/agencia">
+					<f:param name="agencia" value="114" />
+				</h:link>
+				<h:link value="17. Nova Hartz" outcome="/paginas/agencia">
+					<f:param name="agencia" value="65"/>
+				</h:link>
+				<h:link value="18. Parobé" outcome="/paginas/agencia">
+					<f:param name="agencia" value="74" />
+				</h:link>
+			</h:panelGrid>
+
+			<h:panelGrid columns="1" > 
+				<h:link value="19. Taquara" outcome="/paginas/agencia">
+					<f:param name="agencia" value="123" />
+				</h:link>
+				<h:link value="20. Igrejinha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="55" />
+				</h:link>
+				<h:link value="21. Três Coroas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="129" />
+				</h:link>
+				<h:link value="22. Rolante" outcome="/paginas/agencia">
+					<f:param name="agencia" value="149" />
+				</h:link>
+				<h:link value="23. Feliz" outcome="/paginas/agencia">
+					<f:param name="agencia" value="40" />
+				</h:link>
+				<h:link value="24. Salvador do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="92" />
+				</h:link>
+				<h:link value="25. São Sebastião do Caí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="112" />
+				</h:link>
+				<h:link value="26. Capela de Santana" outcome="/paginas/agencia">
+					<f:param name="agencia" value="23" />
+				</h:link>
+				<h:link value="27. Montenegro" outcome="/paginas/agencia">
+					<f:param name="agencia" value="63" />
+				</h:link>
+				<h:link value="28. Triunfo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="79" />
+				</h:link>
+				<h:link value="29. São Jerônimo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="107" />
+				</h:link>
+				<h:link value="30. Charqueadas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="27" />
+				</h:link>
+				<h:link value="31. Arroio dos Ratos" outcome="/paginas/agencia">
+					<f:param name="agencia" value="4" />
+				</h:link>
+				<h:link value="32. Butiá" outcome="/paginas/agencia">
+					<f:param name="agencia" value="156" />
+				</h:link>
+				<h:link value="33. Minas do Leão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="157" />
+				</h:link>
+				<h:link value="34. Guaíba" outcome="/paginas/agencia">
+					<f:param name="agencia" value="49" />
+				</h:link>
+				<h:link value="35. Tapes" outcome="/paginas/agencia">
+					<f:param name="agencia" value="122" />
+				</h:link>
+				<h:link value="36. Camaquã" outcome="/paginas/agencia">
+					<f:param name="agencia" value="13" />
+				</h:link>
+			</h:panelGrid>		
+			
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	
+	
+	</ui:define>
+</ui:composition>
+
+

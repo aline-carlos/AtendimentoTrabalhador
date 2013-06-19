@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF5.jpg"   alt="Região Funcional 5" id="mapaRF5" usemap="#mapaRF5" style="border:none;"/>
+			<map name="mapaRF5">
+			    <area shape="circle" coords="309,130,10,5" href="../agencia.xhtml?agencia=110" target="" alt="São Lourenço do Sul" />
+			    <area shape="circle" coords="248,138,10,5" href="../agencia.xhtml?agencia=19" target="" alt="Canguçu" />
+			    <area shape="circle" coords="210,147,10,5" href="../agencia.xhtml?agencia=78" target="" alt="Piratini" />
+			    <area shape="circle" coords="179,159,10,5" href="../agencia.xhtml?agencia=77" target="" alt="Pinheiro Machado"  />
+			    <area shape="circle" coords="260,189,10,5" href="../agencia.xhtml?agencia=22" target="" alt="Capão do Leão"  />
+			    <area shape="circle" coords="283,188,10,5" href="../agencia.xhtml?agencia=76" target="" alt="Pelotas"  />
+			    <area shape="circle" coords="326,205,10,5" href="../agencia.xhtml?agencia=108" target="" alt="São José do Norte" />
+			    <area shape="circle" coords="306,221,10,5" href="../agencia.xhtml?agencia=87" target="" alt="Rio Grande" />
+			    <area shape="circle" coords="217,238,10,5" href="../agencia.xhtml?agencia=5" target="" alt="Arroio Grande"  />
+			    <area shape="circle" coords="196,273,10,5" href="../agencia.xhtml?agencia=59" target="" alt="Jaguarão"  />
+				<area shape="circle" coords="184,397,9,5"  href="../agencia.xhtml?agencia=97" target="" alt="Santa Vitória do Palmar" />			
+			</map> 			
+			<h:panelGrid columns="1" > 
+				<h:link value="1. São Lourenço" outcome="/paginas/agencia">
+					<f:param name="agencia" value="110" />
+				</h:link>
+				<h:link value="2. Canguçu" outcome="/paginas/agencia">
+					<f:param name="agencia" value="19" />
+				</h:link>
+				<h:link value="3. Piratini" outcome="/paginas/agencia">
+					<f:param name="agencia" value="78" />
+				</h:link>
+				<h:link value="4. Pinheiro Machado" outcome="/paginas/agencia">
+					<f:param name="agencia" value="77" />
+				</h:link>
+				<h:link value="5. Capão do Leão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="22" />
+				</h:link>
+				<h:link value="6. Pelotas" outcome="/paginas/agencia">
+					<f:param name="agencia" value="76" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid columns="1" > 
+				<h:link value="7. São José do Norte" outcome="/paginas/agencia">
+					<f:param name="agencia" value="108" />
+				</h:link>
+				<h:link value="8. Rio Grande" outcome="/paginas/agencia">
+					<f:param name="agencia" value="87" />
+				</h:link>
+				<h:link value="9. Arroio Grande" outcome="/paginas/agencia">
+					<f:param name="agencia" value="5" />
+				</h:link>
+				<h:link value="10. Jaguarão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="59" />
+				</h:link>
+				<h:link value="11. Santa Vitória do Palmar" outcome="/paginas/agencia">
+					<f:param name="agencia" value="97" />
+				</h:link>
+			</h:panelGrid>
+			 			
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf5}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+

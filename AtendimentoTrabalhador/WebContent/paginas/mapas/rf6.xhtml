@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+	<h:panelGrid columns="3">  
+     	 <img src="../../imagens/RF6.jpg"  alt="Região Funcional 6" id="mapaRF6" usemap="#mapaRF6" style="border:none;"/>
+     	 
+     	 <map name="mapaRF6">
+		    <area shape="circle" coords="160,60,9" href="../agencia.xhtml?agencia=103" target="" alt="São Borja"/>
+		    <area shape="circle" coords="106,121,9" href="../agencia.xhtml?agencia=58" target="" alt="Itaqui"  />
+		    <area shape="circle" coords="57,183,9" href="../agencia.xhtml?agencia=133" target="" alt="Uruguaiana"/>
+		    <area shape="circle" coords="119,230,9" href="../agencia.xhtml?agencia=85" target="" alt="Quaraí" />
+		    <area shape="circle" coords="180,172,9" href="../agencia.xhtml?agencia=1" target="" alt="Alegrete"  />
+		    <area shape="circle" coords="199,281,9" href="../agencia.xhtml?agencia=98" target="" alt="Santana do Livramento" />
+		    <area shape="circle" coords="255,221,9" href="../agencia.xhtml?agencia=90" target="" alt="Rosário do Sul" />
+		    <area shape="circle" coords="308,224,9" href="../agencia.xhtml?agencia=106" target="" alt="São Gabriel" />
+		    <area shape="circle" coords="270,297,9" href="../agencia.xhtml?agencia=32" target="" alt="Dom Pedrito"  />
+		    <area shape="circle" coords="328,328,9" href="../agencia.xhtml?agencia=6" target="" alt="Bagé" />
+		    <area shape="circle" coords="347,276,9" href="../agencia.xhtml?agencia=145" target="" alt="Lavras do Sul" />
+		    <area shape="circle" coords="388,244,9" href="../agencia.xhtml?agencia=9" target="" alt="Caçapava do Sul" />
+		</map>
+		<h:panelGrid columns="1" > 
+			<h:link value="1. São Borja" outcome="/paginas/agencia">
+				<f:param name="agencia" value="103" />
+			</h:link>
+			<h:link value="2. Itaqui" outcome="/paginas/agencia">
+				<f:param name="agencia" value="53" />
+			</h:link>
+			<h:link value="3. Uruguaian" outcome="/paginas/agencia">
+				<f:param name="agencia" value="133" />
+			</h:link>
+			<h:link value="4. Quaraí" outcome="/paginas/agencia">
+				<f:param name="agencia" value="85" />
+			</h:link>
+			<h:link value="5. Alegrete" outcome="/paginas/agencia">
+				<f:param name="agencia" value="1" />
+			</h:link>
+			<h:link value="6. Santana do Livramento" outcome="/paginas/agencia">
+				<f:param name="agencia" value="98" />
+			</h:link>
+		</h:panelGrid>
+		<h:panelGrid>
+			<h:link value="7. Rosário do Sul" outcome="/paginas/agencia">
+				<f:param name="agencia" value="90" />
+			</h:link>
+			<h:link value="8. São Gabriel" outcome="/paginas/agencia">
+				<f:param name="agencia" value="106" />
+			</h:link>
+			<h:link value="9. Dom Pedrito" outcome="/paginas/agencia">
+				<f:param name="agencia" value="32" />
+			</h:link>
+			<h:link value="10. Bagé" outcome="/paginas/agencia">
+				<f:param name="agencia" value="6" />
+			</h:link>
+			<h:link value="11. Lavras do Sul" outcome="/paginas/agencia">
+				<f:param name="agencia" value="145" />
+			</h:link>
+			<h:link value="12. Caçapava do Sul" outcome="/paginas/agencia">
+				<f:param name="agencia" value="9" />
+			</h:link>
+		</h:panelGrid>
+	  </h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf6}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+</ui:define>
+</ui:composition>
+

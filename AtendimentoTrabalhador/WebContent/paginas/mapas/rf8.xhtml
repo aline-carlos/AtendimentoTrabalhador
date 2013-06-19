@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF8.jpg" alt="Região Funcional 8" id="mapaRF8" usemap="#mapaRF8" style="border:none;"/>
+ 			
+ 			<map name="mapaRF8">
+			    <area shape="circle" coords="324,70,10,5" href="../agencia.xhtml?agencia=155" target="" alt="Santa Bárbara do Sul" />
+			    <area shape="circle" coords="336,119,10,5" href="../agencia.xhtml?agencia=54" target="" alt="Ibirubá" />
+			    <area shape="circle" coords="277,113,10,5" href="../agencia.xhtml?agencia=31" target="" alt="Cruz Alta"  />
+			    <area shape="circle" coords="241,169,10,5" href="../agencia.xhtml?agencia=132" target="" alt="Tupanciretã" />
+			    <area shape="circle" coords="316,176,10,5" href="../agencia.xhtml?agencia=91" target="" alt="Salto do Jacuí" />
+			    <area shape="circle" coords="280,266,10,5" href="../agencia.xhtml?agencia=153" target="" alt="Silveira Martins"  />
+			    <area shape="circle" coords="270,217,10,5" href="../agencia.xhtml?agencia=144" target="" alt="Itaara"/>
+			    <area shape="circle" coords="253,269,10,5" href="../agencia.xhtml?agencia=95" target="" alt="Santa Maria" />
+			    <area shape="circle" coords="108,189,10,5" href="../agencia.xhtml?agencia=99" target="" alt="Santiago" />
+			    <area shape="circle" coords="72,250,10,5" href="../agencia.xhtml?agencia=104" alt="São Francisco de Assis"  />
+			    <area shape="circle" coords="111,301,10,5" href="../agencia.xhtml?agencia=10" target="" alt="Cacequi"  />
+			    <area shape="circle" coords="281,346,10,5" href="../agencia.xhtml?agencia=113" target="" alt="São Sepé"  /> 
+			    <area shape="circle" coords="357,317,10,5" href="../agencia.xhtml?agencia=11" target="" alt="Cachoeira do Sul"/>
+			
+			</map>
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Santa Bárbara do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="155" />
+				</h:link>
+				<h:link value="2. Ibirubá" outcome="/paginas/agencia">
+					<f:param name="agencia" value="54" />
+				</h:link>
+				<h:link value="3. Cruz Alta" outcome="/paginas/agencia">
+					<f:param name="agencia" value="31" />
+				</h:link>
+				<h:link value="4. Tupaciretã" outcome="/paginas/agencia">
+					<f:param name="agencia" value="132" />
+				</h:link>
+				<h:link value="5. Salto do Jacuí" outcome="/paginas/agencia">
+					<f:param name="agencia" value="91" />
+				</h:link>
+				<h:link value="6. Silveira Martins" outcome="/paginas/agencia">
+					<f:param name="agencia" value="153" />
+				</h:link>
+				<h:link value="7. Itaara" outcome="/paginas/agencia">
+					<f:param name="agencia" value="144" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid>
+				<h:link value="8. Santa Maria" outcome="/paginas/agencia">
+					<f:param name="agencia" value="95" />
+				</h:link>
+				<h:link value="9. Santiago" outcome="/paginas/agencia">
+					<f:param name="agencia" value="99" />
+				</h:link>
+				<h:link value="10. São Francisco de Assis" outcome="/paginas/agencia">
+					<f:param name="agencia" value="104" />
+				</h:link>
+				<h:link value="11. Cacequi" outcome="/paginas/agencia">
+					<f:param name="agencia" value="10" />
+				</h:link>
+				<h:link value="12. São Sepé" outcome="/paginas/agencia">
+					<f:param name="agencia" value="113" />
+				</h:link>
+				<h:link value="13. Cachoeira do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="11" />
+				</h:link>
+			
+			</h:panelGrid>			
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf8}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+

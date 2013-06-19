@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF3.jpg"   alt="Região Funcional 3" id="mapaRF3" usemap="#mapaRF3" style="border:none;"/>
+ 			
+			<map name="mapaRF3">
+			    <area shape="circle" coords="54,204,9" href="../agencia.xhtml?agencia=50" target="" alt="Guaporé"/>
+			    <area shape="circle" coords="98,181,9" href="../agencia.xhtml?agencia=66" target="" alt="Nova Prata" />
+			    <area shape="circle" coords="109,214,9" href="../agencia.xhtml?agencia=137" target="" alt="Veranópolis" />
+			    <area shape="circle" coords="118,261,9" href="../agencia.xhtml?agencia=7" target="" alt="Bento Gonçalves"  />
+			    <area shape="circle" coords="126,279,9" href="../agencia.xhtml?agencia=43" target="" alt="Garibaldi" />
+			    <area shape="circle" coords="127,298,9" href="../agencia.xhtml?agencia=25" target="" alt="Carlos Barbosa" />
+			    <area shape="circle" coords="158,274,9" href="../agencia.xhtml?agencia=39" target="" alt="Farroupilha" />
+			    <area shape="circle" coords="190,264,9" href="../agencia.xhtml?agencia=26" target="" alt="Caxias do Sul" />
+			    <area shape="circle" coords="242,158,9" href="../agencia.xhtml?agencia=134" target="" alt="Vacaria" />
+			    <area shape="circle" coords="321,182,9" href="../agencia.xhtml?agencia=8" target="" alt="Bom Jesus" />
+			    <area shape="circle" coords="202,309,9" href="../agencia.xhtml?agencia=148" target="" alt="Nova Petrópolis" />
+			    <area shape="circle" coords="244,307,9" href="../agencia.xhtml?agencia=47" target="" alt="Gramado"/>
+			    <area shape="circle" coords="269,302,9" href="../agencia.xhtml?agencia=18" target="" alt="Canela" />
+			    <area shape="circle" coords="299,322,9" href="../agencia.xhtml?agencia=105" target="" alt="São Francisco de Paula" />
+			
+			</map> 	
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Guaporé" outcome="/paginas/agencia">
+					<f:param name="agencia" value="50" />
+				</h:link>
+				<h:link value="2. Nova Prata" outcome="/paginas/agencia">
+					<f:param name="agencia" value="66" />
+				</h:link>
+				<h:link value="3. Veranópolis" outcome="/paginas/agencia">
+					<f:param name="agencia" value="137" />
+				</h:link>
+				<h:link value="4. Bento Gonçalves" outcome="/paginas/agencia">
+					<f:param name="agencia" value="7" />
+				</h:link>
+				<h:link value="5. Garibaldi" outcome="/paginas/agencia">
+					<f:param name="agencia" value="43" />
+				</h:link>
+				<h:link value="6. Carlos Barbosa" outcome="/paginas/agencia">
+					<f:param name="agencia" value="25" />
+				</h:link>
+				<h:link value="7. Farroupilha" outcome="/paginas/agencia">
+					<f:param name="agencia" value="39" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid columns="1" > 
+				<h:link value="8. Caxias do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="26" />
+				</h:link>
+				<h:link value="9. Vacaria" outcome="/paginas/agencia">
+					<f:param name="agencia" value="134" />
+				</h:link>
+				<h:link value="10. Bom Jesus" outcome="/paginas/agencia">
+					<f:param name="agencia" value="8" />
+				</h:link>
+				<h:link value="11. Nova Petrópolis" outcome="/paginas/agencia">
+					<f:param name="agencia" value="148" />
+				</h:link>
+				<h:link value="12. Gramado" outcome="/paginas/agencia">
+					<f:param name="agencia" value="47" />
+				</h:link>
+				<h:link value="13. Canela" outcome="/paginas/agencia">
+					<f:param name="agencia" value="18" />
+				</h:link>
+				<h:link value="14. São Francisco de Paula" outcome="/paginas/agencia">
+					<f:param name="agencia" value="105" />
+				</h:link>
+			</h:panelGrid>
+					
+ 			
+ 			
+		</h:panelGrid>
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf3}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+	</ui:define>
+</ui:composition>
+
+
+

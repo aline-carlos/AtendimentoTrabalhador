@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+		<h:form id="frmDesempenho" > 
+			<h:panelGrid columns="4" > 
+				<p:growl id="growl" showDetail="true"/>  
+				<h:commandLink value ="logout" action ="#{usuarioMB.logout}"/>
+   
+				<h:outputLabel value="#{desempenhoMB.mensagem}" />
+			</h:panelGrid>
+		
+			<p:panel header="Cadastro de Desempenho	" style="width:470px;margin:2% 25% 1% 25%;"  >
+				<h:panelGrid columns="2" > 
+					<h:outputLabel for="agencia" value="Agência" />
+					 <p:selectOneMenu id="agencia" value="#{desempenhoMB.agencia.codigo}" required="true" 
+										effect="fade"    filter="true" filterMatchMode="contains" panelStyle="width:140px" >   
+            			<f:selectItems value="#{agenciaMB.lista}" var="ag" itemValue="#{ag.codigo}" itemLabel="#{ag.nome}" />  
+			        </p:selectOneMenu> 
+				</h:panelGrid> 
+				<h:panelGrid columns="4" > 
+			        					  
+				 	<h:outputLabel for="periodo" value="Período" />
+					<p:inputMask id="periodo" value="#{desempenhoMB.periodo}" label="periodo" mask="9999/99"  converter="mascaraConverter" validator="validaPeriodo" />  
+					<p:message for="periodo" />
+					
+					<p:commandButton  value="Consultar" type="submit" action="#{desempenhoMB.consultar}" update="frmDesempenho" />
+					
+				</h:panelGrid> 
+			</p:panel>
+				
+			<p:panel header="Intermediação" style="width:470px;margin:2% 25% 1% 25%;" >
+			<h:panelGrid columns="3" id="interm">
+					
+					<h:outputLabel for="vagas" value="Número de vagas" />
+					<p:inputText id="vagas" value="#{desempenhoMB.desempenho.vagas}" label="vagas" validator="validaNumero" >
+					</p:inputText>
+					<p:message for="vagas" />
+						
+					
+					<h:outputLabel for="inscritos" value="Número de inscritos" />
+					<p:inputText id="inscritos" value="#{desempenhoMB.desempenho.inscritos}" label="inscritos" validator="validaNumero">
+					</p:inputText>
+					<p:message for="inscritos" />
+						
+		
+					<h:outputLabel for="encaminhados" value="Número de encaminhados" />
+					<p:inputText id="encaminhados" value="#{desempenhoMB.desempenho.encaminhados}" label="encaminhados" validator="validaNumero">
+					</p:inputText>
+					<p:message for="encaminhados" />
+		
+					<h:outputLabel for="colocados" value="Número de colocados" />
+					<p:inputText id="colocados" value="#{desempenhoMB.desempenho.colocados}" label="colocados" validator="validaNumero">
+					</p:inputText>
+					<p:message for="colocados" />
+		
+			</h:panelGrid>
+			</p:panel>
+	
+			<p:panel header="Seguro Desemprego" style="width:470px;margin:2% 25% 1% 25%;"  >
+			<h:panelGrid columns="3" id="seguro" >
+					<h:outputLabel for="segurodesemprego" value="Número de requerentes" />
+					<p:inputText id="segurodesemprego" value="#{desempenhoMB.desempenho.segurodesemprego}" label="segurodesemprego" validator="validaNumero">
+					</p:inputText>
+						<p:message for="segurodesemprego" />
+		
+			</h:panelGrid>
+			</p:panel>
+			<p:panel header="Carteira de Trabalho e Previdência Social" style="width:470px;margin:2% 25% 1% 25%;"  >
+			<h:panelGrid columns="3" id="carteira">
+					<h:outputLabel for="ctps" value="Número de emissões" />
+					<p:inputText id="ctps" value="#{desempenhoMB.desempenho.ctps}" label="ctps" validator="validaNumero">
+					</p:inputText>
+						<p:message for="ctps" />
+			</h:panelGrid>
+			</p:panel>
+			<h:panelGrid columns="3" id="operacoes" style="margin:2% 25% 1% 25%;">
+				<p:commandButton  value="Salvar" type="submit" action="#{desempenhoMB.salvar}" 	update="interm,seguro,carteira,frmDesempenho" />
+				<p:commandButton  type="reset" value="Desfazer alterações" update="interm,seguro,carteira,frmDesempenho" />
+			</h:panelGrid>
+		</h:form>
+
+  
+	</ui:define>
+	
+</ui:composition>
+	
+
+
+
+

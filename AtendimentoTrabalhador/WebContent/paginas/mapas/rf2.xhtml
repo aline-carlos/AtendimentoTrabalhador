@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="/template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<ui:define name="conteudo">
+		<h:panelGrid columns="3">  
+ 			<img src="../../imagens/RF2.jpg" alt="Região Funcional 2" id="mapaRF2" usemap="#mapaRF2" style="border:none;"/>
+ 			
+ 			<map name="mapaRF2">
+			    <area shape="circle" coords="319,92,9,5" href="../agencia.xhtml?agencia=33" target="" alt="Encantado" />
+			    <area shape="circle" coords="304,144,9,5" href="../agencia.xhtml?agencia=3" target="" alt="Arroio do Meio" />
+			    <area shape="circle" coords="331,146,9,5" href="../agencia.xhtml?agencia=126" target="" alt="Teutônia" />
+			    <area shape="circle" coords="317,165,9,5" href="../agencia.xhtml?agencia=61" target="" alt="Lajeado" />
+			    <area shape="circle" coords="323,185,9,5" href="../agencia.xhtml?agencia=38" target="" alt="Estrela" />
+			    <area shape="circle" coords="332,217,9,5" href="../agencia.xhtml?agencia=124" target="" alt="Taquari" />
+			    <area shape="circle" coords="267,154,9,5" href="../agencia.xhtml?agencia=147" target="" alt="Mato Leitão" />
+			    <area shape="circle" coords="283,177,9,5" href="../agencia.xhtml?agencia=135" target="" alt="Venâncio Aires" />
+			    <area shape="circle" coords="138,151,9,5" href="../agencia.xhtml?agencia=119" target="" alt="Sobradinho" />
+			    <area shape="circle" coords="179,199,9,5" href="../agencia.xhtml?agencia=16" target="" alt="Candelária" />
+			    <area shape="circle" coords="219,216,9,5" href="../agencia.xhtml?agencia=136" target="" alt="Vera Cruz" />
+			    <area shape="circle" coords="240,201,9,5" href="../agencia.xhtml?agencia=94" target="" alt="Santa Cruz do Sul" />
+			    <area shape="circle" coords="237,260,9,5" href="../agencia.xhtml?agencia=88" target="" alt="Rio Pardo" />
+			    <area shape="circle" coords="234,307,9,5" href="../agencia.xhtml?agencia=73" target="" alt="Pantano Grande" />
+			    <area shape="circle" coords="217,358,9,5" href="../agencia.xhtml?agencia=34" target="" alt="Encruzilhada do Sul" />
+			
+			</map>
+			<h:panelGrid columns="1" > 
+				<h:link value="1. Encantado" outcome="/paginas/agencia">
+					<f:param name="agencia" value="33" />
+				</h:link>
+				<h:link value="2. Arroio do Meio" outcome="/paginas/agencia">
+					<f:param name="agencia" value="3" />
+				</h:link>
+				<h:link value="3. Teutônia" outcome="/paginas/agencia">
+					<f:param name="agencia" value="126" />
+				</h:link>
+				<h:link value="4. Lajeado" outcome="/paginas/agencia">
+					<f:param name="agencia" value="61" />
+				</h:link>
+				<h:link value="5. Estrela" outcome="/paginas/agencia">
+					<f:param name="agencia" value="38" />
+				</h:link>
+				<h:link value="6. Taquari" outcome="/paginas/agencia">
+					<f:param name="agencia" value="124" />
+				</h:link>
+				<h:link value="7. Mato Leitão" outcome="/paginas/agencia">
+					<f:param name="agencia" value="147" />
+				</h:link>
+				<h:link value="8. Venâncio Aires" outcome="/paginas/agencia">
+					<f:param name="agencia" value="135" />
+				</h:link>
+			</h:panelGrid>
+			<h:panelGrid columns="1" > 
+				<h:link value="9. Sobradinho" outcome="/paginas/agencia">
+					<f:param name="agencia" value="119" />
+				</h:link>
+				<h:link value="10. Candelária" outcome="/paginas/agencia">
+					<f:param name="agencia" value="16" />
+				</h:link>
+				<h:link value="11. Vera Cruz" outcome="/paginas/agencia">
+					<f:param name="agencia" value="136" />
+				</h:link>
+				<h:link value="12. Santa Cruz do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="94" />
+				</h:link>
+				<h:link value="13. Rio Pardo" outcome="/paginas/agencia">
+					<f:param name="agencia" value="88" />
+				</h:link>
+				<h:link value="14. Pantano Grande" outcome="/paginas/agencia">
+					<f:param name="agencia" value="73" />
+				</h:link>
+				<h:link value="15. Encruzilhada do Sul" outcome="/paginas/agencia">
+					<f:param name="agencia" value="34" />
+				</h:link>
+			</h:panelGrid>
+ 			
+		</h:panelGrid>
+		
+		<h:panelGrid columns="1" > 
+			<h:outputText value="#{intermediacaoMB.rf2}"/>
+			<h:link value="Voltar para Página Inicial" outcome="/index" />
+		</h:panelGrid>
+		
+	</ui:define>
+</ui:composition>
+
+

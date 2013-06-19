@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="Tue, 01 Jan 2000 12:12:12 GMT"/>
+	
+	<title>Atendimento ao Trabalhador</title>
+	<!--  <link href="../../resources/css/principal.css" rel="stylesheet" type="text/css" /> -->
+</h:head>
+<h:body>
+
+	<style type="text/css">
+.ui-widget {
+	font-size: 12px !important;
+}
+</style>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="120" resizable="false"
+			closable="false" collapsible="true">
+			 <h:graphicImage url="/logoFGTAS.png" /> 
+			 <span style="font-size:30px;"> &nbsp;&nbsp;Relatório de Atendimento ao Trabalhador </span>
+		</p:layoutUnit>
+
+		<p:layoutUnit position="west" size="200px" resizable="true" closable="false" collapsible="true" effect="drop">
+			<h:form>  
+		      <p:growl id="messages"/>  
+		     
+			    <p:panelMenu>  
+			        <p:submenu label="Dados">  
+			          <!--   <p:menuitem value ="Intermediação" action="#{intermediacaoMB.listarIntermediacao}"/> 
+			            <p:menuitem value ="Seguro Desemprego" action ="#{intermediacaoMB.listarSeguro}"  />
+			            <p:menuitem value="Carteira de Trabalho" action="#{intermediacaoMB.listarCtps}"/>  
+			            <p:menuitem value="Ranking do mês" action="#{intermediacaoMB.listarRanking}"/>  
+			            <p:menuitem value="Ranking acumulado" action="#{intermediacaoMB.listarRankingAcumulado}"/>  -->
+			             <p:menuitem value="Intermediação"  outcome="/paginas/intermediacao"  /> 
+			             <p:menuitem value="Seguro Desemprego"  outcome="/paginas/seguro"  /> 
+			             <p:menuitem value="Carteira de Trabalho"  outcome="/paginas/ctps"  /> 
+			             <p:menuitem value="Ranking do mês"  outcome="/paginas/ranking"  /> 
+			             <p:menuitem value="Ranking acumulado"  outcome="/paginas/rankingacumulado"  />
+			        </p:submenu>  
+			         <p:separator />  
+			        <p:submenu label="Administração">  
+			            <p:menuitem value="Cadastramento de dados" outcome="/paginas/adm/exibeDesempenho"/>  
+			            <p:menuitem value="Publicação" outcome="/paginas/adm/exibePublicacao"/>  
+			            <p:menuitem value="Caged" outcome="/paginas/adm/caged"/>  
+			            <p:menuitem value="Metas" outcome="/paginas/adm/meta"/>  
+			        </p:submenu>  
+			        
+			    </p:panelMenu>
+			    
+			</h:form>  
+			
+		</p:layoutUnit>
+		 
+		<p:layoutUnit position="center">
+ 
+			<ui:insert name="conteudo" />
+		</p:layoutUnit>
+
+	</p:layout>
+
+
+</h:body>
+</html>
