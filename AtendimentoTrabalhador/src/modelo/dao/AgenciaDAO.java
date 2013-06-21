@@ -18,6 +18,12 @@ public class AgenciaDAO extends DaoGenericoImp<Agencia, Serializable> {
 		return super.todos();
 	}
 	
+	public List<Agencia> listarAtivas() {
+		String sqlQuery  = "from Agencia where ativa = true " ;
+		return super.listPesq(sqlQuery);
+		
+	}
+	
 	
 
 
