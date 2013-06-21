@@ -19,6 +19,10 @@ public class RegionalDAO extends DaoGenericoImp<Regional, Serializable>{
 		return super.todos();
 	}
 	
-	
+	public List<Regional> listarAtivas() {
+		String sqlQuery  = "from Regional where ativa = true " ;
+		return super.listPesq(sqlQuery);
+		
+	}	
 
 }

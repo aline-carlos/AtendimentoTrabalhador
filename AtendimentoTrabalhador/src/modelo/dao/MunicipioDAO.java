@@ -20,4 +20,10 @@ public class MunicipioDAO extends DaoGenericoImp<Municipio, Serializable> {
 		return super.todos();
 	}
 	
+	public List<Municipio> listarAtivos() {
+		String sqlQuery  = "from Municipio where ativo = true " ;
+		return super.listPesq(sqlQuery);
+		
+	}
+	
 }
