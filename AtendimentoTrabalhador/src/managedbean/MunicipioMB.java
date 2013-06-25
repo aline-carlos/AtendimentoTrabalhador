@@ -18,6 +18,7 @@ public class MunicipioMB implements Serializable{
 	private Municipio municipio = new Municipio();
 	private MunicipioDAO dao = new MunicipioDAO();
 	private List<Municipio> lista = new ArrayList<Municipio>();
+	private List<Municipio> listaAtivos = new ArrayList<Municipio>();
 
 	public MunicipioMB() {
 		lista = dao.listar();
@@ -57,6 +58,15 @@ public class MunicipioMB implements Serializable{
 	
 	public void setLista(List<Municipio> lista) {
 		this.lista = lista;
+	}
+
+	public List<Municipio> getListaAtivos() {
+		listaAtivos = dao.listarAtivos();
+		return listaAtivos;
+	}
+
+	public void setListaAtivos(List<Municipio> listaAtivos) {
+		this.listaAtivos = listaAtivos;
 	}
 
 

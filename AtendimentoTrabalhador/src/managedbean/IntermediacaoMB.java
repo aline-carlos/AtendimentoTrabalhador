@@ -114,12 +114,7 @@ public class IntermediacaoMB implements Serializable{
 	}
 	
 	public String getVoltarAgencia(){
-		String pagina="";
-		if (this.nroAgencia == 0)
-			pagina= "";
-		else
-			pagina = "/paginas/agencia";
-		return pagina;
+		return "/paginas/agencia";
 			
 	}
 	
@@ -290,7 +285,6 @@ public class IntermediacaoMB implements Serializable{
 	}
 	
 	public String getPaginaInicial(){
-		System.out.println("pagina inicial");
 		this.setNroRegiao(0);
 		this.setNroAgencia(0);
 		return null;

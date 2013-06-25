@@ -21,7 +21,7 @@
 					<h:outputLabel for="municipio" value="Município" />
 					 <p:selectOneMenu id="municipio" value="#{metaMB.municipio.codigo}" required="true" 
 										effect="fade"    filter="true" filterMatchMode="contains" panelStyle="width:140px" >   
-            			<f:selectItems value="#{municipioMB.lista}" var="m" itemValue="#{m.codigo}" itemLabel="#{m.nome}" />  
+            			<f:selectItems value="#{municipioMB.listaAtivos}" var="m" itemValue="#{m.codigo}" itemLabel="#{m.nome}" />  
 			        </p:selectOneMenu> 
 				</h:panelGrid> 
 				<h:panelGrid columns="4" > 

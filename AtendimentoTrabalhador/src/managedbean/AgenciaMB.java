@@ -19,6 +19,7 @@ public class AgenciaMB implements Serializable {
 	private Agencia agencia = new Agencia();
 	private AgenciaDAO dao = new AgenciaDAO();
 	private List<Agencia> lista = new ArrayList<Agencia>();
+	private List<Agencia> listaAtivas = new ArrayList<Agencia>();
 	private int agenciaSelecionada = 0;
 	
 	public AgenciaMB() {
@@ -89,6 +90,15 @@ public class AgenciaMB implements Serializable {
 		this.getAgencia().setCodigo(81);
 		this.consultar();
 		return "/paginas/agencia";
+	}
+
+	public List<Agencia> getListaAtivas() {
+		listaAtivas = dao.listarAtivas();
+		return listaAtivas;
+	}
+
+	public void setListaAtivas(List<Agencia> listaAtivas) {
+		this.listaAtivas = listaAtivas;
 	}
 
 }

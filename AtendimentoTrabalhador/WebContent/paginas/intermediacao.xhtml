@@ -10,8 +10,6 @@
 	xmlns:p="http://primefaces.org/ui">
  	
 	<ui:define name="conteudo">
-		
-		
 		<h:form id="frmIntermediacao">
 			<h:outputText value="#{intermediacaoMB.intermediacao}"/>
 			
@@ -25,30 +23,31 @@
 	   					title="Evolução no ano"  minY="0" style="height:300px;width:450px;margin:10px 15px 0px 0px;text-align:left;float:right"/>
 	   					
 				<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.lista}"  style="width:450px;margin:10px 0px 0px 15px;text-align:center;float:left" emptyMessage="Nenhum registro encontrado.">
-						<p:column headerText="Período">
-							<h:outputText value="#{registro.mes}" />
-						</p:column>
-						<p:column headerText="Vagas" style="text-align:right">
-							<h:outputText value="#{registro.vagas}" />
-						</p:column>
-						<p:column headerText="Inscritos" style="text-align:right">
-							<h:outputText value="#{registro.inscritos}" />
-						</p:column>
-		
-						<p:column headerText="Encaminhados" style="text-align:right">
-							<h:outputText value="#{registro.encaminhados}" />
-						</p:column>
-						<p:column headerText="Colocados" style="text-align:right">
-							<h:outputText value="#{registro.colocados}" />
-						</p:column>
+					<p:column headerText="Período">
+						<h:outputText value="#{registro.mes}" />
+					</p:column>
+					<p:column headerText="Vagas" style="text-align:right">
+						<h:outputText value="#{registro.vagas}" />
+					</p:column>
+					<p:column headerText="Inscritos" style="text-align:right">
+						<h:outputText value="#{registro.inscritos}" />
+					</p:column>
+	
+					<p:column headerText="Encaminhados" style="text-align:right">
+						<h:outputText value="#{registro.encaminhados}" />
+					</p:column>
+					<p:column headerText="Colocados" style="text-align:right">
+						<h:outputText value="#{registro.colocados}" />
+					</p:column>
 				</p:dataTable>
 			</h:panelGrid>
-				    
-	    	<!--  </p:panel> -->
-		</h:form>
+		</h:form> 
 		<h:panelGrid columns="7" > 
-			<h:link value="Página Inicial" outcome="/index" /> &nbsp;<h:link value="#{intermediacaoMB.local}"  outcome="#{intermediacaoMB.voltar}"/> &nbsp;<h:link value="#{intermediacaoMB.localAgencia}"  outcome="#{intermediacaoMB.voltarAgencia}"/> &nbsp; Intermediação
+			<h:link value="Página Inicial" outcome="/index" /> &nbsp;<h:link value="#{intermediacaoMB.local}"  outcome="#{intermediacaoMB.voltar}"/> &nbsp;
+				<h:link value="#{intermediacaoMB.localAgencia}"  outcome="#{intermediacaoMB.voltarAgencia}"/> &nbsp; Intermediação
 		</h:panelGrid>
+		
+		
 
 
 	</ui:define>

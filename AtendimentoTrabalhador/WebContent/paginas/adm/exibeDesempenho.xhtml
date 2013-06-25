@@ -23,7 +23,7 @@
 					<h:outputLabel for="agencia" value="Agência" />
 					 <p:selectOneMenu id="agencia" value="#{desempenhoMB.agencia.codigo}" required="true" 
 										effect="fade"    filter="true" filterMatchMode="contains" panelStyle="width:140px" >   
-            			<f:selectItems value="#{agenciaMB.lista}" var="ag" itemValue="#{ag.codigo}" itemLabel="#{ag.nome}" />  
+            			<f:selectItems value="#{agenciaMB.listaAtivas}" var="ag" itemValue="#{ag.codigo}" itemLabel="#{ag.nome}" />  
 			        </p:selectOneMenu> 
 				</h:panelGrid> 
 				<h:panelGrid columns="4" > 
