@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+		<h:form id="frmMuncipios" > 
+			<h:panelGrid columns="4" > 
+				<p:growl id="growl" showDetail="true"/>  
+				<h:commandLink value ="logout" action ="#{usuarioMB.logout}"/>
+			</h:panelGrid>
+		
+			<p:panel header="Cadastro Município" style="width:470px;margin:2% 25% 1% 25%;">
+				
+				<h:panelGrid columns="3" > 
+			        		
+			       	<h:outputLabel for="codigo" value="Código" />
+				 	<p:inputText id="codigo" value="#{municipioMB.municipio.codigo}" />
+				 	
+				 	<p:commandButton  value="Consultar" type="submit" actionListener="#{municipioMB.consultar}" update="frmMuncipios" />
+				 					 	
+			    </h:panelGrid>
+			    
+			    <h:panelGrid columns="2" >        					  
+				 	<h:outputLabel for="municipio" value="Município" />
+				 	<p:inputText id="municipio" value="#{municipioMB.municipio.nome}"  />
+				 	
+				 	<h:outputLabel for="regional" value="Regional" />
+				 	<p:selectOneMenu id="regional" value="#{municipioMB.regional.codigo}" 
+										effect="fade" filter="true" filterMatchMode="contains" panelStyle="width:140px" style="width:300px"  >   
+            			<f:selectItems value="#{regionalMB.lista}" var="ag" itemValue="#{ag.codigo}" itemLabel="#{ag.descricao}" />  
+			        </p:selectOneMenu> 
+				 	
+				 	<h:outputLabel for="ativo" value="Ativo" />
+				 	<p:inputText id="ativo" value="#{municipioMB.municipio.ativo}" />
+				 	
+					
+					<p:commandButton  value="Cadastrar" type="submit" actionListener="#{municipioMB.atualizar}" update="frmMuncipios" />
+					
+				</h:panelGrid> 
+			</p:panel>
+			
+			
+	
+			
+		</h:form>
+
+  
+	</ui:define>
+	
+</ui:composition>
+	
+
+
+
+

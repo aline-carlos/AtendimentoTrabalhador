@@ -1,0 +1,9 @@
+﻿-- object: servicos.seq_municipio | type: SEQUENCE -- 
+CREATE SEQUENCE servicos.seq_municipio
+	INCREMENT BY 1
+	MINVALUE 0
+	MAXVALUE 9223372036854775807
+	START WITH 500
+	CACHE 1
+	NO CYCLE
+	OWNED BY NONE;

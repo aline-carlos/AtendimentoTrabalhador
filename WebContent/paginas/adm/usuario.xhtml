@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+		<h:form id="frmUsuario" > 
+			<h:panelGrid columns="4" > 
+				<p:growl id="growl" showDetail="true"/>  
+				<h:commandLink value ="logout" action ="#{usuarioMB.logout}"/>
+				<h:outputText id="mensagem" value="#{usuarioMB.mensagem}"  />
+			</h:panelGrid>
+			<p:panel header="Consulta Usuário" style="width:470px;margin:2% 25% 1% 25%;"  >
+				<h:panelGrid columns="4" id="consultaUsuario" >  
+					<h:outputLabel for="loginconsulta" value="Login" />
+					<p:inputText id="loginconsulta" value="#{usuarioMB.usuario.login}" label="loginconsulta"  >
+					</p:inputText>
+					<p:message for="loginconsulta" />
+					<p:commandButton  value="Consultar" type="submit" action="#{usuarioMB.consultar}" update="consultaUsuario" />
+
+					<h:outputLabel for="nomeconsulta" value="Nome do usuário" />
+					<p:inputText id="nomeconsulta" value="#{usuarioMB.usuario.nome}" label="nomeconsulta"  >
+					</p:inputText>
+					<p:message for="nomeconsulta" />
+					<p:growl/>
+					
+					<h:outputLabel for="administradorconsulta" value="Administrador" />
+        			<p:selectBooleanCheckbox id="administradorconsulta" value="#{usuarioMB.usuario.isadministrador}" />
+				</h:panelGrid>
+					
+			</p:panel>
+			<p:panel header="Novo Usuário" style="width:470px;margin:2% 25% 1% 25%;"  >
+				<h:panelGrid columns="3" id = "incluiUsuario"> 
+					<h:outputLabel for="login" value="Login" />
+					<p:inputText id="login" value="#{usuarioMB.novoUsuario.login}" label="login"  >
+					</p:inputText>
+					<p:message for="login" />
+					
+					<h:outputLabel for="nome" value="Nome do usuário" />
+					<p:inputText id="nome" value="#{usuarioMB.novoUsuario.nome}" label="nome"  >
+					</p:inputText>
+					<p:message for="nome" />
+					
+				 	<h:outputLabel for="senha" value="Senha" />
+					<p:password id="senha" value="#{usuarioMB.novoUsuario.senha}" label="senha"  />  
+					<p:message for="senha" />
+					<h:outputLabel for="administrador" value="Administrador" />
+        			<p:selectBooleanCheckbox id="administrador" value="#{usuarioMB.novoUsuario.isadministrador}" />
+				</h:panelGrid>
+					
+				<p:commandButton  value="Novo" type="submit" action="#{usuarioMB.incluir}" update="frmUsuario" />
+					
+			</p:panel>
+			
+			
+			
+		
+		</h:form>
+
+  
+	</ui:define>
+	
+</ui:composition>
+	
+
+
+
+

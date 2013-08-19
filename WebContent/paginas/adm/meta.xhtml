@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:composition 
+	template="../../template/template.xhtml" 
+     xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+ 	
+	<ui:define name="conteudo">
+		<h:form id="frmMeta" > 
+			<h:panelGrid columns="2" style="width:100%"> 
+				<h:commandLink value ="logout" action ="#{usuarioMB.logout}"/>
+				<p:growl id="growl" showDetail="true"/>
+				<h:panelGrid columns="1" style="width:100%;text-align:center">   
+					<h:outputLabel value="#{metaMB.mensagem}" />
+				</h:panelGrid>
+   			</h:panelGrid>
+		
+			<p:panel header="Metas" style="width:470px;margin:2% auto"  >
+				<h:panelGrid columns="2" > 
+					<h:outputLabel for="municipio" value="Município" />
+					 <p:selectOneMenu id="municipio" value="#{metaMB.municipio.codigo}" required="true" 
+										effect="fade"    filter="true" filterMatchMode="contains" panelStyle="width:140px" >   
+            			<f:selectItems value="#{municipioMB.listaAtivos}" var="m" itemValue="#{m.codigo}" itemLabel="#{m.nome}" />  
+			        </p:selectOneMenu> 
+				</h:panelGrid> 
+				<h:panelGrid columns="4" > 
+			        					  
+				<p:commandButton  value="Consultar" type="submit" action="#{metaMB.consultar}" update="frmMeta" />
+				</h:panelGrid>
+			</p:panel>
+				
+			<p:panel header="Nova meta" style="width:470px;margin:2% auto" >
+				<h:panelGrid columns="3" id="cadastramento">
+
+					<h:outputLabel for="desde" value="A partir de:" />
+					<p:inputMask id="desde" value="#{metaMB.desde}" mask="99/99/9999">
+						<f:convertDateTime pattern="dd/MM/yyyy" timeZone="GMT-2" /><!-- Com esse timezone fica sem hora no managedBean  -->
+					</p:inputMask>  
+					
+					<p:message for="desde" />
+
+					<h:outputLabel for="valor" value="Valor:" />
+					<p:inputText id="valor" value="#{metaMB.meta.valor}" label="valor" >
+					</p:inputText>
+					<p:message for="valor" />
+				</h:panelGrid>
+				<p:commandButton  value="Salvar" type="submit" action="#{metaMB.salvar}" update="frmMeta,metascadastradas" />
+			</p:panel>
+			<p:panel header="Períodos cadastrados" style="width:470px;margin:2% auto" >
+				<h:panelGrid columns="1" id="metascadastradas">
+			
+				    <p:dataTable var="meta" value="#{metaMB.lista}"> 
+				        <p:column headerText="De">  
+            				<h:outputText value="#{meta.id.desde}">  
+    				        	<f:convertDateTime pattern="dd/MM/yyyy" />
+    				        </h:outputText>
+				        </p:column>  
+				     
+ 						<p:column headerText="Até">  
+    				        <h:outputText value="#{meta.ate}" >
+    				        	<f:convertDateTime pattern="dd/MM/yyyy" />
+    				        </h:outputText>
+    				          
+						</p:column>
+						<p:column headerText="Valor">  
+    				        <h:outputText value="#{meta.valor}" />  
+						</p:column>
+					</p:dataTable>  
+				</h:panelGrid>
+			</p:panel> 	
+			
+		</h:form>
+  
+	</ui:define>
+	
+</ui:composition>
+	
