@@ -25,17 +25,17 @@ public class ControleAcesso implements PhaseListener {
 	public void beforePhase(PhaseEvent event) {
 		FacesContext ctx = event.getFacesContext();
         String viewId = ctx.getViewRoot().getViewId();
-        
-        System.out.println("entrou..." );
+        HttpSession httpSession = (HttpSession)ctx.getExternalContext().getSession(true);
+        System.out.println("entrou... viewId:" + viewId);
         
         for (String s : getProtectedPaths(ctx)) {
     			
         	String[] p = s.split("=");
         	if (viewId.indexOf(p[0]) > -1) {
-
-        		HttpSession httpSession = (HttpSession)ctx.getExternalContext().getSession(true);
+        		System.out.println("1..." );
+        		//HttpSession httpSession = (HttpSession)ctx.getExternalContext().getSession(true);
         		if (httpSession == null || httpSession.getAttribute(JSF_SECURITY_KEY) == null) {
-
+        			System.out.println("2..." );
         			httpSession.setAttribute(VIEWID_KEY, viewId);
         			
         			ctx.getApplication().getNavigationHandler().handleNavigation(ctx, null, ("/paginas/login.xhtml" ));

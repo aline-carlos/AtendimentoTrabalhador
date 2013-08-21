@@ -116,7 +116,7 @@ public class DesempenhoDAO extends DaoGenericoImp<Desempenho, Serializable>{
 		
 	}
 	
-	public List<Ranking> ranking() {
+	public List<Ranking> ranking(Integer periodo) {
 		String sqlQuery  = "select m.codigo, c.id.periodo, t.valor, c.admitidos, c.admitidos*(t.valor/100), sum(d.colocados)" +
 							"from  Municipio m, Meta t, Caged c, Agencia a, Desempenho d " + 
 							"where t.id.municipio = m.codigo " + 
@@ -134,7 +134,7 @@ public class DesempenhoDAO extends DaoGenericoImp<Desempenho, Serializable>{
 							"group by m.codigo, c.id.periodo, t.valor, c.admitidos " ;
 
 		final Map<String, Object> parameters = new HashMap<String, Object>();
-		parameters.put("periodo", Periodo.anterior());
+		parameters.put("periodo", periodo);
 		
 		Iterator retornoBD = super.listPesqParam(sqlQuery, parameters).iterator();
 

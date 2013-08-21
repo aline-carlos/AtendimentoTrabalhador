@@ -31,9 +31,6 @@ public class DesempenhoMB implements Serializable {
 	
 	private String mensagem = ""; 
 	
-	//@ManagedProperty("#{usuarioMB.logado}")  
-	//private boolean usuarioLogado; 
-
 	public DesempenhoMB() {
 	}
 	
@@ -50,7 +47,6 @@ public class DesempenhoMB implements Serializable {
 		
 		ValidaDesempenho validacao = new ValidaDesempenho();
 		
-		//ctx.addMessage(null, new FacesMessage("O mês informado não é valido."));
 		
 		DesempenhoPK desempenhoPK = new DesempenhoPK();
 		desempenhoPK.setAgencia(this.getAgencia().getCodigo());

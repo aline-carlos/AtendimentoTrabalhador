@@ -12,8 +12,11 @@ import negocio.Ranking;
 import org.primefaces.model.chart.CartesianChartModel;
 import org.primefaces.model.chart.ChartSeries;
 
+import util.Periodo;
+
 import modelo.Agencia;
 import modelo.Desempenho;
+import modelo.Mes;
 import modelo.Regional;
 import modelo.dao.AgenciaDAO;
 import modelo.dao.DesempenhoDAO;
@@ -30,9 +33,11 @@ public class IntermediacaoMB implements Serializable{
 	private DesempenhoDAO dao = new DesempenhoDAO();
 	private List<Desempenho> lista = new ArrayList<Desempenho>();
 	private List<Ranking> rankinglist = new ArrayList<Ranking>();
+	private List<Mes> meses = new ArrayList<Mes>();
 	private CartesianChartModel grafico;
 	private int nroRegiao = 0;
 	private int nroAgencia = 0;
+	private Integer mes = 0;
 	private String titulo = "";
 	
 	private String valor = "ff";
@@ -64,7 +69,8 @@ public class IntermediacaoMB implements Serializable{
 	
 	public String listarRanking(){
 		this.setTitulo("Ranking de Colocação no Mercado de Trabalho - Mês");
-		rankinglist = dao.ranking();
+		setMeses(Periodo.ultimos6meses());
+		rankinglist = dao.ranking(this.getMes());
 		return "/paginas/ranking";
 	}
 
@@ -79,9 +85,7 @@ public class IntermediacaoMB implements Serializable{
 				Regional regional = new Regional();
 				RegionalDAO daor = new RegionalDAO();
 				regional = daor.consultar(this.getNroRegiao());
-				System.out.println("antes");
 				rankinglist = dao.rankingAcumulado(regional);
-				System.out.println("depois");
 			}
 		else{
 			Agencia agencia = new Agencia();
@@ -368,6 +372,22 @@ public class IntermediacaoMB implements Serializable{
 	public String getRankingAcumulado() {
 		this.listarRankingAcumulado();
 		return null;
+	}
+
+	public Integer getMes() {
+		return mes;
+	}
+
+	public void setMes(Integer mes) {
+		this.mes = mes;
+	}
+
+	public List<Mes> getMeses() {
+		return meses;
+	}
+
+	public void setMeses(List<Mes> meses) {
+		this.meses = meses;
 	}
 	
 

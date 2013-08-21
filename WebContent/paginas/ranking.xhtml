@@ -15,8 +15,18 @@
 			<h:outputText value="#{intermediacaoMB.ranking}"/> 
 
 			<h:outputText value="#{intermediacaoMB.titulo}" />
-			<h:panelGrid style="margin:auto" >	
-				<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.rankinglist}"  style="margin:2% 0% 0% 0%"  emptyMessage="Não há dados para o mês anterior">
+			<h:panelGrid style="margin:auto" >
+				<h:panelGrid columns="2" >   
+					
+				
+					<p:selectOneMenu id="mes" value="#{intermediacaoMB.mes}">  
+	    	            <f:selectItems value="#{intermediacaoMB.meses}" var="m" itemValue="#{m.mes}" itemLabel="#{m.descricao}"/>  
+	        	    </p:selectOneMenu>  	
+	        	     <p:commandButton value="Consultar" update="frmRanking" id="consulta"  
+	            		 actionListener="#{intermediacaoMB.listarRanking}"/>  
+  				</h:panelGrid>	
+				
+				<p:dataTable id="tblRetorno" var="registro" value="#{intermediacaoMB.rankinglist}"  style="margin:2% 0% 0% 0%"  emptyMessage="Não há dados para o mês selecionado.">
 					<p:column headerText="Municipio" style="text-align:left">
 						<h:outputText value="#{registro.municipio.nome}" />
 					</p:column>

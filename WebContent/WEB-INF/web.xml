@@ -33,17 +33,13 @@
         <param-name>jsf.ambito</param-name> 
         <param-value>/paginas/mapas</param-value> 
   </context-param>
-  <filter>  
-    <filter-name>filtroSessao</filter-name>  
-    <filter-class>util.FiltroSessao</filter-class>   
-</filter>  
-  
-<filter-mapping>  
-    <filter-name>filtroSessao</filter-name>   
-    <url-pattern>/paginas/adm/*</url-pattern>  
-</filter-mapping> 
-  <error-page>  
-    <exception-type>javax.faces.application.ViewExpiredException</exception-type>  
-    <location>/paginas/login.xhtml</location>  
-  </error-page>  
+	<filter>  
+	    <filter-name>filtroSessao</filter-name>  
+	    <filter-class>util.FiltroSessao</filter-class>   
+	</filter>  
+	<filter-mapping>  
+	    <filter-name>filtroSessao</filter-name>   
+	    <url-pattern>/paginas/adm/*</url-pattern>  
+	</filter-mapping> 
+   
 </web-app>

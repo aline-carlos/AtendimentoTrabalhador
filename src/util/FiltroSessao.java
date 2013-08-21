@@ -11,7 +11,7 @@ public class FiltroSessao implements Filter {
 	    
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {     
         HttpServletRequest httpRequest = (HttpServletRequest)request;     
-    
+        
         try {     
             if (!httpRequest.isRequestedSessionIdValid()) {     
                 HttpServletResponse httpResponse = (HttpServletResponse)response;     
@@ -24,7 +24,8 @@ public class FiltroSessao implements Filter {
             httpResponse.sendRedirect(httpRequest.getContextPath() + "/paginas/login.xhtml");     
         }     
     }     
-	    
-	    public void destroy() {     
+
+    	
+    public void destroy() {     
     }     
 }  
